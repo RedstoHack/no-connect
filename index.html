@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смотри видео</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0f0f11, #1a1a1f);
+            color: #ffffff;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+            letter-spacing: -1px;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1080px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+            background: #000;
+        }
+        
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 80vh;
+        }
+        
+        .controls-hint {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: #aaa;
+            opacity: 0.8;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .video-wrapper {
+                border-radius: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📹 Твоё видео</h1>
+        
+        <div class="video-wrapper">
+            <video controls autoplay muted loop playsinline>
+                <source src="video.mp4" type="video/mp4">
+                <!-- Если вдруг браузер не поддерживает mp4 -->
+                Ваш браузер не поддерживает воспроизведение видео.<br>
+                Скачайте файл: <a href="video.mp4" style="color:#00bfff;">video.mp4</a>
+            </video>
+        </div>
+        
+        <div class="controls-hint">
+            Нажми на видео, чтобы включить звук • Работает на телефоне и компьютере
+        </div>
+        
+        <div class="footer">
+            Просто сохрани этот код в файл <strong>index.html</strong>,<br>
+            положи рядом с файлом <strong>video.mp4</strong> и открой в браузере.<br>
+            Или залей оба файла на любой хостинг — и кидай ссылку человеку.
+        </div>
+    </div>
+</body>
+</html>
